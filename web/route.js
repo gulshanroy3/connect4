@@ -10,6 +10,7 @@ class route {
     this.app.get("/start-game", route.startGame);
     this.app.get("/stop-game", route.stopGame);
     this.app.get("/make-move", route.makeMove);
+    this.app.get("/",route.homePage)
   }
 
   routeConfig() {

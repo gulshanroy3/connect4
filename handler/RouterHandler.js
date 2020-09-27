@@ -1,6 +1,23 @@
 
 const Util = require("./util");
 class RouteHandler {
+  async homePage(req,res){
+    return res.send(
+      `
+      .welcome to connect 4 game<br>.
+      To install this app in local ,clone it from here https://github.com/gulshanroy3/connect4<br>.
+      command-> npm i and npm run start-dev<br>.
+      to start use  /start-game<br>.
+      to stop use /stop-game<br>.
+      to make move use /make-move?col={column-name}<br><br>
+
+      Thanks
+        `
+    )
+  }
+
+
+
   async startGame(req, res) {
     let util = new Util();
     if (req.session.intialGameSetup) {
